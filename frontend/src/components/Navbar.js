@@ -2,7 +2,7 @@ import React from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { StickyNote, Home, LogOut, User, Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { isAuthenticated, getAuthToken, setAuthToken } from '../utils/api';
+import { isAuthenticated, setAuthToken } from '../utils/api';
 
 const Navbar = () => {
   const location = useLocation();

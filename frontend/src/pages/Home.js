@@ -22,7 +22,8 @@ const Home = () => {
 
     setIsLoading(true);
     try {
-      const response = await API.post('/notes', newNote);
+  // Remove the unused 'response' variable
+  await API.post('/notes', newNote);
       setNewNote({ title: '', content: '' });
       setIsFormOpen(false);
       alert('Note created successfully!');

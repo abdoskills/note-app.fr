@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { LogIn, Mail, Lock, User } from 'lucide-react';
+import { LogIn, Mail, Lock } from 'lucide-react'; // Remove User;
 import { authAPI } from '../utils/api';
 import { setAuthToken } from '../utils/api';
 

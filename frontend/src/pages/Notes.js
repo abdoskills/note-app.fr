@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Trash2, Edit, Plus, X } from "lucide-react";
+import { Trash2, Edit } from 'lucide-react'; // Remove Plus
 import API from "../utils/api";
 
 const Notes = () => {

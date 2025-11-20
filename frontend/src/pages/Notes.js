@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Trash2, Edit } from 'lucide-react'; // Remove Plus
 import API from "../utils/api";
+import { X } from 'lucide-react';
 
 const Notes = () => {
   const [notes, setNotes] = useState([]);

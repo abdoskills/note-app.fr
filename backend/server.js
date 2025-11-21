@@ -9,10 +9,11 @@ const app = express();
 
 // Fix CORS - Add this before your routes
 app.use(cors({
-  origin: "http://localhost:3000", // Your React app URL
-  credentials: true,
-  methods: ["GET", "POST", "PUT", "DELETE"],
-  allowedHeaders: ["Content-Type", "Authorization"]
+  origin: [
+    'http://localhost:3000',
+    'https://your-frontend-app.vercel.app'  // Your actual Vercel frontend URL
+  ],
+  credentials: true
 }));
 
 app.use(express.json());

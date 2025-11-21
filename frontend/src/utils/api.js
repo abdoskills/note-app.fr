@@ -1,7 +1,12 @@
 import axios from 'axios';
 
+// Use your Vercel backend URL for production
+const API_BASE_URL = process.env.NODE_ENV === 'production' 
+  ? 'https://note-app-backend-sigma.vercel.app/api'  // ← Your Vercel backend
+  : 'http://localhost:5000/api';
+
 const API = axios.create({
-  baseURL: 'http://localhost:5000/api', // Your backend URL
+  baseURL: API_BASE_URL,
   timeout: 10000,
 });
 
@@ -33,13 +38,13 @@ API.interceptors.response.use(
   }
 );
 
-// Auth API calls - MATCHING YOUR BACKEND
+// Auth API calls
 export const authAPI = {
   register: (userData) => API.post('/auth/register', userData),
   login: (credentials) => API.post('/auth/login', credentials),
 };
 
-// Notes API calls - MATCHING YOUR BACKEND
+// Notes API calls
 export const notesAPI = {
   getAllNotes: () => API.get('/notes'),
   createNote: (noteData) => API.post('/notes', noteData),
